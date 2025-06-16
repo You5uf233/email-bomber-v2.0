@@ -50,8 +50,8 @@ class EmailBomber:
         self.y = bColors.YELLOW
         try:
             print(self.b + '\n[+] Initializing bomber ...')
-            self.target = str(input(self.g + '[:] Enter Target Email > '))
-            self.mode = int(input(self.g + '[:] Enter BOMB mode (1,2,3,4) || 1:(1000) 2:(500) 3:(250) 4:(custom) > '))
+            self.target = str(input(self.g + '[:] Enter Target Email > Yousuf.habibzai@gmail.com '))
+            self.mode = int(input(self.g + '[4] Enter BOMB mode (1,2,3,4) || 1:(1000) 2:(500) 3:(250) 4:(custom) > 4'))
 
             if int(self.mode) > int(4) or int(self.mode) < int(1):
                 print(self.r + '[-] ERROR: Invalid Option!')
@@ -72,7 +72,7 @@ class EmailBomber:
             elif self.mode == int(3):
                 self.amount = int(250)
             else:
-                self.amount = int(input(self.g + '[:] Choose a CUSTOM amount > '))
+                self.amount = int(input(self.g + '[:] 10 > '))
             print(self.g + f'[+] You have selected BOMB mode {self.mode} and {self.amount} emails')
 
         except Exception as e:
@@ -82,7 +82,7 @@ class EmailBomber:
     def email(self):
         try:
             print(self.b + '\n[+] Setting up email ...')
-            self.server = str(input(self.g + '[:] Enter email server | or select premade options - 1:Gmail 2:Yahoo '
+            self.server = str(input(self.g + '[1] Enter email server | or select premade options - 1:Gmail 2:Yahoo '
                                              '3:Outlook 4:Custom > '))
             defaultPort = True
 
